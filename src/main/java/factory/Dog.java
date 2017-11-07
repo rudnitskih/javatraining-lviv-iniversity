@@ -1,6 +1,7 @@
 package factory;
 
 import lombok.Getter;
+import mySpring.annotations.InjectRandomInt;
 
 @Getter
 public class Dog implements Animal {

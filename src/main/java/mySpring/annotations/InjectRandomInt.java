@@ -1,4 +1,4 @@
-package factory;
+package mySpring.annotations;
 
 import java.lang.annotation.Retention;
 

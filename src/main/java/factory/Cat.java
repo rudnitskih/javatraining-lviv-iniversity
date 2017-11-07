@@ -1,5 +1,7 @@
 package factory;
 
+import mySpring.annotations.InjectRandomInt;
+
 public class Cat implements Animal {
 
     @InjectRandomInt(min = 30, max = 70)
