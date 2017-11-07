@@ -8,4 +8,9 @@ import lombok.Data;
 public class Person {
     private String name;
     private MaritalStatus maritalStatus;
+
+    @Override
+    public String toString() {
+       return name + ", " + maritalStatus.getRussianDesc();
+    }
 }

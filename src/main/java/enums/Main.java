@@ -1,12 +1,23 @@
 package enums;
 
+import lombok.SneakyThrows;
+
 public class Main {
+    @SneakyThrows
     public static void main(String[] args) {
-        Person mstislav = new Person("Mstislav", MaritalStatus.SINGLE);
-        Person yaroslav = new Person("Yaroslav", MaritalStatus.SINGLE);
+        PersonReader personReader = new PersonReader();
+        Person previousPerson = null;
 
+        while (true) {
+            Person person = personReader.read();
 
-        MaritalStatus maritalStatus = MaritalStatus.findByDbCode(20);
-        System.out.println(maritalStatus.getRussianDesc());
+            if (person.equals(previousPerson)) {
+                System.out.println("You again???");
+            } else {
+                previousPerson = person;
+            }
+
+            Thread.sleep(1000);
+        }
     }
 }
